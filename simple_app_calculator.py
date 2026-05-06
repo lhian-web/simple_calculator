@@ -32,3 +32,26 @@ def get_num(self):
             return first_number, second_number
         except ValueError:
             print("Only numbers are accepted")
+
+def operations(self):
+    print("\nChoose operation:")
+    print("+ Addition")
+    print("- Subtraction")
+    print("* Multiplication")
+    print("/ Division")
+
+    while True:
+        operation = input("Enter operation (+, -, *, /): ")
+        if operation in ["+", "-", "*", "/"]:
+            return operation
+        print("Invalid operation")
+
+def calculator(self, operation, first_number, second_number):
+    if operation == "+":
+        return Addition(first_number, second_number)
+    elif operation == "-":
+        return Subtraction(first_number, second_number)
+    elif operation == "*":
+        return Multiplication(first_number, second_number)
+    else:
+        return Division(first_number, second_number)
