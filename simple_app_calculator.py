@@ -1,3 +1,5 @@
+import winsound
+
 class Calculator:
     def __init__(self, firstnumber, secondnumber):
         self.firstnumber = firstnumber
@@ -55,3 +57,9 @@ def calculator(self, operation, first_number, second_number):
         return Multiplication(first_number, second_number)
     else:
         return Division(first_number, second_number)
+
+def sound_effect(self):
+    try:
+        winsound.Playsound("tada.wav", winsound.SND_FILENAME)
+    except:
+        pass
