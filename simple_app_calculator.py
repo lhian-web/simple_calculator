@@ -22,7 +22,7 @@ class Multiplication(Calculator):
 
 class Division(Calculator):
     def calculate(self):
-        if self.firstnumber == 0:
+        if self.secondnumber == 0:
             raise ZeroDivisionError("Cannot divide by zero")
         return self.firstnumber / self.secondnumber
 
@@ -68,7 +68,7 @@ class CalculatorApp:
     def continue_calculator(self):
         while True:
             user_choice = input("\nWould you like to continue? (y/n): ").lower()
-            if user_choice == "y":
+            if user_choice in ['y', 'n']:
                 return user_choice == "y"
             print("Invalid choice")
 
