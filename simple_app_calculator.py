@@ -22,7 +22,7 @@ class Multiplication(Calculator):
 
 class Division(Calculator):
     def calculate(self):
-        if self.firstnumber != 0:
+        if self.firstnumber == 0:
             raise ZeroDivisionError("Cannot divide by zero")
         return self.firstnumber / self.secondnumber
 
